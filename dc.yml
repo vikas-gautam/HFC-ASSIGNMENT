@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nodeapp
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: nodeapp
@@ -19,3 +19,8 @@ spec:
         image: vikas93/nodedev:v1
         ports:
         - containerPort: 8080
+        resources:
+          limits:
+            cpu: "1.5"
+          requests:
+            cpu: "0.2"
